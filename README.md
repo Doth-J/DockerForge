@@ -41,7 +41,7 @@ The tool generates docker definitions ( _Dockerfile, docker-compose.yaml, docker
 The tool can also scaffold a template project, creating an `src` directory for your project and the accompanying package manager for the selected language. After running the command shown above the _project_ directory has the following structure:
 
 <p align="center">
-  <img width="400px" src="./docs/structure.png">
+  <img width="100%" src="./docs/structure.png">
 </p>
 
 ### **Programming Languages** 📚
