@@ -1,5 +1,3 @@
-# DockerForge
-
 <p align="center">
   <img width="500px" src="./docs/dockerforge.png">
 </p>
