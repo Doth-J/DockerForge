@@ -28,8 +28,8 @@ function writeMakefile(name: string, language?: string) {
   let makefileContent = "start:\n\tdocker-compose up -d\n";
   makefileContent += "stop:\n\tdocker-compose down -v\n";
   makefileContent += `build:\n\tdocker build -t ${name}-app .\n`;
-  makefileContent += "update:\n\tmake stop\n\tmake remove\n\tmake start\n";
   makefileContent += `remove:\n\tdocker image rm ${name}-app\n`;
+  makefileContent += "update:\n\tmake stop\n\tmake remove\n\tmake start\n";
   makefileContent +=
     "production:\n\tdocker-compose -f docker-compose.yaml -f docker-compose.production.yaml up -d\n";
   if (language) {
@@ -78,7 +78,9 @@ function main() {
 
   program
     .name(kleur.yellow(name))
-    .description(`🐳 ${kleur.cyan("Dockerfile generator for CD/CI projects")}`)
+    .description(
+      `🐳 ${kleur.cyan("Dockerfile generator cli tool for CD/CI operations.")}`
+    )
     .option("-n,--name <string>", kleur.blue("Target project name"))
     .option("-e,--env", kleur.blue("Create project .env file"))
     .option("-m,--makefile", kleur.blue("Create project Makefile"))
