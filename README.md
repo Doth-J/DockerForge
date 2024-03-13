@@ -2,7 +2,7 @@
   <img width="500px" src="./docs/dockerforge.png">
 </p>
 
-Command line tool to generate dockerfile definitions and scaffold project templates for CI/CD operations, developed in [Bun](https://bun.sh).
+Command line tool to generate dockerfile definitions and scaffold project templates for CI/CD operations.
 
 ## **Motivation** 🔥
 
@@ -18,7 +18,7 @@ Dockerforge aims to automate the production of these files, offering also scaffo
 
 ## **Installation** ⚡
 
-### Using **Bun <img width="20px" src="./docs/bun.svg">**
+### Using **[Bun <img width="20px" src="./docs/bun.svg">](https://bun.sh)**
 
 To install the cli tool, execute the following command:
 
