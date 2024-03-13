@@ -10,11 +10,11 @@ Upon creating Docker projects and modules, I observed a recurring pattern in the
 
 - The `src` folder containing the code.
 - The `Dockefile` for building the docker image.
-- (_Optionally_) the `config` file for runtime configuring.
-- (_Optionally_) the `.env` file for setting environmental variables.
-- (_Optionally_) the `docker-compose.yaml` for creating a Docker service stack.
+- (_Optionally_) The `config` file for runtime configuration.
+- (_Optionally_) The `.env` file for setting environmental variables.
+- (_Optionally_) The `docker-compose.yaml` for creating a Docker service stack.
 
-Dockerforge aims to automate the production of these files, offering also scaffolded templates for the supported programming languages. This can help minize from idea, to development and production phases and reduce time required to dockerize your implementation.
+Dockerforge intends to automate the creation of these files while also providing scaffolded templates for the various programming languages. This can help you shorten the time it takes to go from idea to development to production and reduce the time required to dockerize your application.
 
 ## **Installation** ⚡
 
@@ -35,10 +35,10 @@ To install the cli tool using the binary, head over to X:
 The tool generates docker definitions ( _Dockerfile, docker-compose.yaml, docker-compose.production.yaml_ ) for the selected programming language in the current directory. This definitions include a structure for building the docker image of your application using two phases, development and production. When the `docker-compose.yaml` file is used to create a docker service then the development phase of the docker image is utilized allowing for hot-reload of your code inside the container. When the `docker-compose.production.yaml` file is invoked, then the corresponding production phase of the docker image is used. Once installed, you can use the tool interactively or with cli options by executing the `dockeforge` command:
 
 <p align="center">
-  <img width="400px" src="./docs/usage.png">
+  <img width="100%" src="./docs/usage.png">
 </p>
 
-<!-- The tool can also scaffold a template project, creating an `src` directory for your project and the accompanying package manager for the selected language. After running the command shown above the _project_ directory has the following structure: -->
+The tool can also scaffold a template project, creating an `src` directory for your project and the accompanying package manager for the selected language. After running the command shown above the _project_ directory has the following structure:
 
 <p align="center">
   <img width="400px" src="./docs/structure.png">
@@ -56,7 +56,7 @@ The tool supports docker definitions and scaffolded templates ( _`src`, language
 
 ### **CLI Options** ⚙️
 
-The tool is interactive, but it can also be used with cli option flags. These are the following:
+The tool is interactive, but it can also be used with cli options, which are the following:
 
 ```console
 $ dockerforge -h
