@@ -7,7 +7,7 @@
   "homepage": "https://github.com/Doth-J/DockerForge#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Doth-J/DockerForge"
+    "url": "git+https://github.com/Doth-J/DockerForge.git"
   },
   "dependencies": {
     "commander": "^12.0.0",
