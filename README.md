@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="500px" src="https://raw.githubusercontent.com/Doth-J/DockerForge/main/docs/dockerforge.png" alt="DockerForge">
+  <img width="500px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/dockerforge.png?raw=true" alt="DockerForge">
 </p>
 
 Command line tool to generate dockerfile definitions and scaffold project templates for CI/CD operations.
@@ -18,7 +18,7 @@ Dockerforge intends to automate the creation of these files while also providing
 
 ## **Installation** ⚡
 
-### Using **[<img width="25px" src="https://raw.githubusercontent.com/Doth-J/DockerForge/main/docs/npm.png">](https://www.npmjs.com/package/dockerforge)**
+### Using **[<img width="25px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/npm.png">](https://www.npmjs.com/package/dockerforge)**
 
 To install tool, execute the following command:
 
@@ -26,7 +26,7 @@ To install tool, execute the following command:
 npm install -g dockerforge
 ```
 
-### Using **[bun <img width="20px" src="https://raw.githubusercontent.com/Doth-J/DockerForge/main/docs/bun.svg">](https://bun.sh)**
+### Using **[bun <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/bun.svg">](https://bun.sh)**
 
 To install tool, execute the following command:
 
@@ -39,13 +39,13 @@ bun install -g dockerforge
 The tool generates docker definitions ( _Dockerfile, docker-compose.yaml, docker-compose.production.yaml_ ) for the selected programming language in the current directory. This definitions include a structure for building the docker image of your application using two phases, development and production. When the `docker-compose.yaml` file is used to create a docker service then the development phase of the docker image is utilized allowing for hot-reload of your code inside the container. When the `docker-compose.production.yaml` file is invoked, then the corresponding production phase of the docker image is used. Once installed, you can use the tool interactively or with cli options by executing the `dockeforge` command:
 
 <p align="center">
-  <img width="100%" style="border-radius:50px" src="https://raw.githubusercontent.com/Doth-J/DockerForge/main/docs/usage.png">
+  <img width="100%" style="border-radius:50px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/usage.png">
 </p>
 
 The tool can also scaffold a template project, creating an `src` directory for your project and the accompanying package manager for the selected language. After running the command shown above the _project_ directory has the following structure:
 
 <p align="center">
-  <img width="100%" style="border-radius:50px" src="https://raw.githubusercontent.com/Doth-J/DockerForge/main/docs/structure.png">
+  <img width="100%" style="border-radius:50px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/structure.png">
 </p>
 
 ### **Programming Languages** 📚
