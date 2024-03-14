@@ -169,4 +169,5 @@ out
 
 # custom
 bin/
+releases/
 package-lock.json
