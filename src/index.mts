@@ -1,12 +1,12 @@
-#! /usr/bin/env bun
+#! /usr/bin/env node
 import fs from "fs";
 import ora from "ora";
 import path from "path";
 import kleur from "kleur";
 import prompts from "prompts";
 import { Command, Option } from "commander";
-import { name, version } from "../package.json";
-import { typescript, javascript, python, go, rust } from "./languages";
+// import pkg from "../package.json" assert { type: "json" };
+import { typescript, javascript, python, go, rust } from "./languages/index.js";
 
 function writeConfig(config: string) {
   let configContent = "";
@@ -77,7 +77,7 @@ function main() {
   const program = new Command();
 
   program
-    .name(kleur.yellow(name))
+    .name(kleur.yellow("dockerforge"))
     .description(
       `🐳 ${kleur.cyan("Dockerfile generator cli tool for CD/CI operations.")}`
     )
@@ -104,7 +104,7 @@ function main() {
       new Option("-h,--help", kleur.blue("Display this help message"))
     )
     .version(
-      `${name} ${version}`,
+      `dockerforge v.1.0.0`,
       "-v, --version",
       kleur.blue("Output the current version")
     )

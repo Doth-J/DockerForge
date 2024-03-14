@@ -18,30 +18,34 @@ Dockerforge intends to automate the creation of these files while also providing
 
 ## **Installation** ⚡
 
-### Using **[Bun <img width="20px" src="./docs/bun.svg">](https://bun.sh)**
+### Using **[<img width="25px" src="./docs/npm.png">](https://www.npmjs.com/package/dockerforge)**
 
-To install the cli tool, execute the following command:
+To install tool, execute the following command:
+
+```bash
+npm install -g dockerforge
+```
+
+### Using **[bun <img width="20px" src="./docs/bun.svg">](https://bun.sh)**
+
+To install tool, execute the following command:
 
 ```bash
 bun install -g dockerforge
 ```
-
-### Using **Binary <img width="20px" src="./docs/binary.svg">**
-
-To install the cli tool using the binary, head over to X:
 
 ## **Usage** 🚀
 
 The tool generates docker definitions ( _Dockerfile, docker-compose.yaml, docker-compose.production.yaml_ ) for the selected programming language in the current directory. This definitions include a structure for building the docker image of your application using two phases, development and production. When the `docker-compose.yaml` file is used to create a docker service then the development phase of the docker image is utilized allowing for hot-reload of your code inside the container. When the `docker-compose.production.yaml` file is invoked, then the corresponding production phase of the docker image is used. Once installed, you can use the tool interactively or with cli options by executing the `dockeforge` command:
 
 <p align="center">
-  <img width="100%" src="./docs/usage.png">
+  <img width="100%" style="border-radius:50px" src="./docs/usage.png">
 </p>
 
 The tool can also scaffold a template project, creating an `src` directory for your project and the accompanying package manager for the selected language. After running the command shown above the _project_ directory has the following structure:
 
 <p align="center">
-  <img width="100%" src="./docs/structure.png">
+  <img width="100%" style="border-radius:50px" src="./docs/structure.png">
 </p>
 
 ### **Programming Languages** 📚

@@ -1,8 +1,14 @@
 {
   "name": "dockerforge",
   "version": "1.0.0",
+  "description": "CLI tool to generate dockerfile definitions and scaffold project templates",
   "author": "Doth-J",
-  "module": "src/index.ts",
+  "main": "dist/index.mjs",
+  "homepage": "https://github.com/Doth-J/DockerForge#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Doth-J/DockerForge"
+  },
   "dependencies": {
     "commander": "^12.0.0",
     "kleur": "^4.1.5",
@@ -10,21 +16,30 @@
     "prompts": "^2.4.2",
     "yaml": "^2.4.1"
   },
-  "peerDependencies": {
-    "typescript": "^5.4.2"
-  },
   "devDependencies": {
     "@types/prompts": "^2.4.9",
-    "bun-types": "latest",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "terser": "^5.29.2",
+    "typescript": "^5.4.2"
   },
   "bin": {
-    "dockerforge": "./src/index.ts"
+    "dockerforge": "dist/index.min.mjs"
   },
+  "engines": {
+    "node": ">=18.15.0",
+    "npm": ">=9.5.0",
+    "bun": ">=1.0.30"
+  },
+  "keywords": [
+    "dockerforge",
+    "dockerfiles",
+    "docker-compose",
+    "scaffold"
+  ],
   "license": "Apache-2.0",
   "scripts": {
-    "compile": "rimraf bin && bun build src/index.ts --compile --minify --outfile ./bin/dockeforge",
-    "start": "bun run src/index.ts"
-  },
-  "type": "commonjs"
+    "build": "rimraf dist && tsc && terser dist/index.mjs -c -o dist/index.min.mjs",
+    "compile": "rimraf bin && bun build src/index.mts --compile --minify --outfile ./bin/dockeforge",
+    "start": "bun dist/index.mjs"
+  }
 }
