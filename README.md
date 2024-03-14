@@ -23,7 +23,7 @@ Dockerforge intends to automate the creation of these files while also providing
 To install tool, execute the following command:
 
 ```bash
-npm install -g dockerforge
+npm install -g dockerforged
 ```
 
 ### Using **[bun <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/bun.svg">](https://bun.sh)**
@@ -31,7 +31,7 @@ npm install -g dockerforge
 To install tool, execute the following command:
 
 ```bash
-bun install -g dockerforge
+bun install -g dockerforged
 ```
 
 ## **Usage** 🚀
