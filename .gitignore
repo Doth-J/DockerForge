@@ -171,3 +171,9 @@ out
 bin/
 releases/
 package-lock.json
+
+
+# Added by cargo
+
+/target
+.vscode

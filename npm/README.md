@@ -18,29 +18,11 @@ Dockerforge intends to automate the creation of these files while also providing
 
 ## **Installation** ⚡
 
-### Using **[<img width="25px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/npm.png">](https://www.npmjs.com/package/dockerforged)**
-
 To install tool, execute the following command:
 
 ```bash
 npm install -g dockerforge
 ```
-
-### Using **binary <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/rust.svg">**
-
-Head over to the releases pages and download the appropriate release for your OS:
-
-```bash
-./dockerforged
-```
-
-<!-- ### Using **[bun <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/bun.svg">](https://bun.sh)**
-
-To install tool, execute the following command:
-
-```bash
-bun install -g dockerforged
-````-->
 
 ## **Usage** 🚀
 

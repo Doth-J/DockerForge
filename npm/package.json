@@ -17,18 +17,19 @@
     "yaml": "^2.4.1"
   },
   "devDependencies": {
+    "@types/node": "^20.11.30",
     "@types/prompts": "^2.4.9",
     "rimraf": "^5.0.5",
     "terser": "^5.29.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   },
   "bin": {
-    "dockerforge": "dist/index.min.mjs"
+    "dockerforge": "index.js"
   },
   "engines": {
     "node": ">=18.15.0",
-    "npm": ">=9.5.0",
-    "bun": ">=1.0.30"
+    "npm": ">=9.5.0"
   },
   "keywords": [
     "dockerforge",
@@ -38,6 +39,7 @@
   ],
   "license": "Apache-2.0",
   "scripts": {
+    "dev": "ts-node index.ts",
     "build": "rimraf dist && tsc && terser dist/index.mjs -c -o dist/index.min.mjs",
     "compile": "rimraf bin && bun build src/index.mts --compile --minify --outfile ./bin/dockeforge",
     "start": "bun dist/index.mjs"
