@@ -26,7 +26,7 @@ To install tool, execute the following command:
 npm install -g dockerforge
 ```
 
-### Using **binary <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/rust.svg">**
+### Using **binary <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/af023d10edd1694951108def1728257825b08e41/docs/rust.svg">**
 
 Head over to the releases pages and download the appropriate release for your OS:
 
