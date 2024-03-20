@@ -23,7 +23,7 @@ Dockerforge intends to automate the creation of these files while also providing
 To install tool, execute the following command:
 
 ```bash
-npm install -g dockerforge
+npm install -g dockerforged
 ```
 
 ### Using **binary <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/af023d10edd1694951108def1728257825b08e41/docs/rust.svg">**

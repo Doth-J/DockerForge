@@ -21,7 +21,7 @@ Dockerforge intends to automate the creation of these files while also providing
 To install tool, execute the following command:
 
 ```bash
-npm install -g dockerforge
+npm install -g dockerforged
 ```
 
 ## **Usage** 🚀
