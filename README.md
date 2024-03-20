@@ -31,7 +31,7 @@ npm install -g dockerforged
 Head over to the releases pages and download the appropriate release for your OS:
 
 ```bash
-./dockerforged
+./dockerforge
 ```
 
 <!-- ### Using **[bun <img width="20px" src="https://github.com/Doth-J/DockerForge/blob/3624f29cef3789c48adfe1fbd41b3254adf5feb7/docs/bun.svg">](https://bun.sh)**
