@@ -3,8 +3,8 @@ import yaml from "yaml";
 export function dockerize(
   name: string,
   config?: string,
-  author?: string,
-  license?: string
+  _author?: string,
+  _license?: string
 ) {
   let dockerfile: string[] = [];
 
