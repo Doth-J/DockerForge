@@ -139,7 +139,7 @@ export default function Forge() {
         </div>
         <div className="flex flex-col col-span-6 sm:col-span-2 gap-2 w-full text-xl p-2 bg-slate-800/[.3] border-slate-300/[.75] border-[1px] rounded-md">
           <CodeBox
-            title="Configuration"
+            title="Config"
             subtitle={setup.config == "" ? "" : "config." + setup.config}
             icon="assets/config.svg"
             disabled={setup.config == ""}
