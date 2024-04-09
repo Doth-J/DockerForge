@@ -28,6 +28,7 @@ export type SetupLicense = {
 export type SetupLanguage = {
   type: "setup_language";
   language: Languages;
+  template: Templates;
 };
 export type SetupTemplate = {
   type: "setup_template";
@@ -82,6 +83,7 @@ export function SetupReducer(state: SetupState, action: SetupActions) {
     case "setup_language":
       return {
         ...state,
+        template: action.template,
         language: action.language,
       };
     case "setup_config":

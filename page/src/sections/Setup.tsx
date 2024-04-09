@@ -97,6 +97,7 @@ export default function Setup() {
               setup({
                 type: "setup_language",
                 language: e.target.value as Languages,
+                template: "basic",
               })
             }
             className="rounded-lg p-1 border-[1px] text-center"
