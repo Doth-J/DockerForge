@@ -26,12 +26,14 @@ export default function CodeBox({
         <h1 className="flex items-center text-xl sm:text-3xl gap-2">
           <img src={icon} alt="CodeBoxIcon" width={"25px"} />
           {title}
-          {subtitle && <span className="text-sm sm:text-md">({subtitle})</span>}
+          {subtitle && (
+            <span className="max-sm:hidden sm:text-sm ">({subtitle})</span>
+          )}
         </h1>
         <div className="flex items-center gap-2">
           {!disabled && subtitle?.endsWith(".json") && (
             <button
-              className="bg-sky-600/[.5] rounded-md p-1 hover:bg-sky-600 active:bg-sky-500 text-xs sm:text-md"
+              className="bg-sky-600/[.5] rounded-md p-2 hover:bg-sky-600 active:bg-sky-500 text-xs sm:text-md"
               title="Format"
               onClick={() => {
                 let audio = new Audio("assets/format.wav");
@@ -53,13 +55,13 @@ export default function CodeBox({
               <img
                 src="controls/format.svg"
                 alt="FormatIcon"
-                className="sm:w-[25px] w-[15px]"
+                className="sm:w-[25px] w-[20px]"
               />
             </button>
           )}
           {!disabled && (
             <button
-              className="bg-sky-600/[.5] rounded-md p-1 hover:bg-sky-600 active:bg-sky-500 text-xs sm:text-md"
+              className="bg-sky-600/[.5] rounded-md p-2 hover:bg-sky-600 active:bg-sky-500 text-xs sm:text-md"
               title="Download"
               onClick={() => {
                 let audio = new Audio("assets/download.wav");
@@ -114,7 +116,7 @@ export default function CodeBox({
               <img
                 src="controls/download.svg"
                 alt="DownloadIcon"
-                className="sm:w-[25px] w-[15px]"
+                className="sm:w-[25px] w-[20px]"
               />
             </button>
           )}
