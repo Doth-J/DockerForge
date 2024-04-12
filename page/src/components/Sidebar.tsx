@@ -1,13 +1,15 @@
 import { Link, Events, scrollSpy } from "react-scroll";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMenu } from "../providers/MenuProvider";
 
 export default function Sidebar() {
   const [menu, setMenu] = useMenu();
+  const [scrolling, setScrolling] = useState<boolean>(false);
   useEffect(() => {
     Events.scrollEvent.register("begin", function (to) {
       setMenu(to);
-      console.log(menu);
+      setScrolling(true);
+      setTimeout(() => setScrolling(false), 400);
     });
 
     scrollSpy.update();
@@ -27,55 +29,59 @@ export default function Sidebar() {
           smooth={true}
           spy={true}
           onClick={() => setMenu("intro")}
-          onSetActive={() => setMenu("intro")}
+          onSetActive={() => {
+            if (!scrolling) setMenu("intro");
+          }}
           duration={400}
           className="w-full hover:bg-slate-300 hover:text-black rounded-xl text-center px-2 hover:shadow-md hover:cursor-pointer"
         >
-          {menu === "intro" && <span>&gt; </span>}
+          {menu === "intro" && <span>&bull; </span>}
           Intro
-          {menu === "intro" && <span> &lt;</span>}
         </Link>
         <Link
           to="howto"
           containerId="content"
           spy={true}
           onClick={() => setMenu("howto")}
-          onSetActive={() => setMenu("howto")}
+          onSetActive={() => {
+            if (!scrolling) setMenu("howto");
+          }}
           smooth={true}
           duration={400}
           className="w-full hover:bg-slate-300 hover:text-black rounded-xl text-center px-2 hover:shadow-md hover:cursor-pointer"
         >
-          {menu === "howto" && <span>&gt; </span>}
+          {menu === "howto" && <span>&bull; </span>}
           How
-          {menu === "howto" && <span> &lt;</span>}
         </Link>
         <Link
           to="setup"
           containerId="content"
           spy={true}
           onClick={() => setMenu("setup")}
-          onSetActive={() => setMenu("setup")}
+          onSetActive={() => {
+            if (!scrolling) setMenu("setup");
+          }}
           smooth={true}
           duration={400}
           className="w-full hover:bg-slate-300 hover:text-black rounded-xl text-center px-2 hover:shadow-md hover:cursor-pointer"
         >
-          {menu === "setup" && <span>&gt; </span>}
+          {menu === "setup" && <span>&bull; </span>}
           Setup
-          {menu === "setup" && <span> &lt;</span>}
         </Link>
         <Link
           to="forge"
           onClick={() => setMenu("forge")}
-          onSetActive={() => setMenu("forge")}
+          onSetActive={() => {
+            if (!scrolling) setMenu("forge");
+          }}
           containerId="content"
           spy={true}
           smooth={true}
           duration={400}
           className="w-full hover:bg-slate-300 hover:text-black rounded-xl text-center px-2 hover:shadow-md hover:cursor-pointer"
         >
-          {menu === "forge" && <span>&gt; </span>}
+          {menu === "forge" && <span>&bull; </span>}
           Forge
-          {menu === "forge" && <span> &lt;</span>}
         </Link>
       </div>
       <div className="mt-auto w-full flex flex-col gap-2">
